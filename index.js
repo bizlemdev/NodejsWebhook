@@ -18,7 +18,7 @@ restService.post('/bizbotapi', function(req, res) {
        speech = "in Which tool you want to create Project?";
       }else if(req.body.result.parameters.echoText == "Github"){
       speech = "What is the Project Name and  Description?";
-      }else if(req.body.result.parameters.echoText == "Name: New, Description: NLP POC"){
+      }else if(req.body.result.parameters.echoText == "Name New Description NLP POC"){
       speech = "Ok. I am going to create \"New\" project in Github with description \"NLP POC\"";
       }else if(req.body.result.parameters.echoText == "How many Tasks open in X Project current sprint"){
       speech = "20 Tasks and 5 Bugs are in Open status";
@@ -32,7 +32,7 @@ restService.post('/bizbotapi', function(req, res) {
       speech = "Which Project?";
       }else if(req.body.result.parameters.echoText == "X Project"){
       speech = "What should be new branch Name?";
-      }else if(req.body.result.parameters.echoText == "beta_v0.1"){
+      }else if(req.body.result.parameters.echoText == "beta v0.1"){
       speech = "Is new pipeline for \"beta_v0.1\" Branch?";
       }else if(req.body.result.parameters.echoText == "yes"){
       speech = "Is the pipeline for developer or Autodeployment?";
@@ -42,7 +42,7 @@ restService.post('/bizbotapi', function(req, res) {
             	speech=speech+'<br>'+"CI/CD pipeline job (\"beta_v0.1\") created in Jenkins";
       }else if(req.body.result.parameters.echoText == "Create New Task"){
       speech = "in Which project you want to create task?";
-      }else if(req.body.result.parameters.echoText == "\"X\""){
+      }else if(req.body.result.parameters.echoText == "X"){
       speech = "What is the Task Description?";
       }else if(req.body.result.parameters.echoText == "NLP POC"){
       speech = "Do you want to assign it to specific user?";
