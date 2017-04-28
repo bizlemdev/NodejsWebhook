@@ -55,7 +55,8 @@ restService.post('/bizbotapi', function(req, res) {
       speech="Ok. I am Assigning \"NLP POC\" task under \"X\" project to \"Geetanjali\".";
       speech=speech+'<br>'+"X-1023(\"NLP POC\") is assigned to \"Geetanjali\".";
       }else{
-      speech = "I am not able to Recognize your Voice !";
+      //speech = "I am not able to Recognize your Voice !";
+        speech = "req.body";
       }
    }
     // var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
