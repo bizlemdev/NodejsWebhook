@@ -12,11 +12,19 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/echo', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
+   var speech = "false";
+    if(req.body.result != null && req.body.result.parameters != null){
+   if(req.body.result.parameters.echoText == "Create New Project"){
+       speech = "in Which tool you want to create Project?";
+      }else{
+      speech = "I am not able to Recognize your Voice !";
+      }
+   }
+    // var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     return res.json({
         speech: speech,
         displayText: speech,
-        source: 'webhook-echo-sample'
+        source: 'biz-webhook-sample'
     });
 });
 
