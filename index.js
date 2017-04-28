@@ -16,7 +16,7 @@ restService.post('/bizbotapi', function(req, res) {
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
        speech = "in Which tool you want to create Project?";
-      }else if(req.body.result.parameters.echoText.equalsIgnoreCase("Github")){
+      }else if(req.body.result.parameters.echoText == "Github"){
       speech = "What is the Project Name and  Description?";
       }else{
       speech = "I am not able to Recognize your Voice !";
