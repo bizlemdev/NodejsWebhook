@@ -11,11 +11,13 @@ restService.use(bodyParser.urlencoded({
 
 restService.use(bodyParser.json());
 
-restService.post('/echo', function(req, res) {
+restService.post('/bizbotapi', function(req, res) {
    var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
        speech = "in Which tool you want to create Project?";
+      }else if(req.body.result.parameters.echoText.equalsIgnoreCase("Github")){
+      speech = "What is the Project Name and  Description?";
       }else{
       speech = "I am not able to Recognize your Voice !";
       }
