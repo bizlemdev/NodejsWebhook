@@ -69,6 +69,11 @@ restService.post('/bizbotapi', function(req, res) {
 
 restService.post('/slack-test', function(req, res) {
 
+var speech = "false";
+    if(req.body.result != null && req.body.result.parameters != null){
+   if(req.body.result.parameters.echoText == "Create New Project"){
+   
+
     var slack_message = {
         "text": "Details of JIRA board for Browse and Commerce",
         "attachments": [{
@@ -111,10 +116,14 @@ restService.post('/slack-test', function(req, res) {
             }]
         }]
     }
+	
+	
+	}}
+   
     return res.json({
-        speech: "speech",
-        displayText: "speech",
-        source: 'webhook-echo-sample',
+        speech: speech,
+        displayText: speech,
+        source: 'biz-webhook-sample',
         data: {
             "slack": slack_message
         }
