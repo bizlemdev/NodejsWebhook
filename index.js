@@ -179,7 +179,7 @@ var speech = "false";
         source: 'biz-webhook-sample',
         data: {
             "slack": slack_message
-	 "skype": slack_message
+	 
 			
         }
     });
