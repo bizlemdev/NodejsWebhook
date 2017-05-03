@@ -166,9 +166,7 @@ var speech = "false";
 }
 
 var skype_message = {
-    "text": "New comic book alert!",
-
-
+   
                    "attachments": [
                      {
                       "contentType": "application/vnd.microsoft.card.thumbnail",
@@ -199,8 +197,8 @@ var skype_message = {
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-		"skype" :skype_message,
-            "slack": slack_message
+		"skype" :skype_message
+           
 	
 			
         }
