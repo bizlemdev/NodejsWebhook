@@ -164,13 +164,34 @@ var speech = "false";
         }
     ]
 }
-	
-	
-	}
-	
-	
-	
-	
+
+var skype_message = {
+    "text": "New comic book alert!",
+
+
+                   "attachments": [
+                     {
+                      "contentType": "application/vnd.microsoft.card.thumbnail",
+                       "content": {
+                         "title": "I'm a thumbnail card",
+                         "subtitle": "Pig Latin Wikipedia Page",
+                         "images": [
+                           {
+                            "url": "https://<ImageUrl1>"
+                          }
+                        ],
+                        "buttons": [
+                          {
+                            "type": "openUrl",
+                           "title": "WikiPedia Page",
+                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+    
+	}}
 	}
    
     return res.json({
@@ -178,9 +199,9 @@ var speech = "false";
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-            "slack": slack_message,
-	"slack": slack_message
-	 
+		"skype" :skype_message
+            "slack": slack_message
+	
 			
         }
     });
