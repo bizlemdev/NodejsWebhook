@@ -199,7 +199,7 @@ var skype_message = {
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-		"skype" :skype_message
+		"skype" :skype_message,
             "slack": slack_message
 	
 			
