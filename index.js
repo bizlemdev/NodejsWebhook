@@ -178,7 +178,8 @@ var speech = "false";
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-            "slack": slack_message
+            "slack": slack_message,
+	"slack": slack_message
 	 
 			
         }
