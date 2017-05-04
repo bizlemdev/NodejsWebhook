@@ -74,69 +74,54 @@ var speech = "false";
    if(req.body.result.parameters.echoText == "Create New Project"){
    
 var slack_message = {
-"attachmentLayout":"carousel",
-     "attachments": [
-         {
-             "contentType": "application/vnd.microsoft.card.hero",
-             "content": {
-                 "title": "I'm a hero card about Pig Latin",
-                 "subtitle": "PigLatin Wikipedia Page",
-                 "images": [
+    "text": "New comic book alert!",
+    "attachments": [
+        {
+            "title": "The Further Adventures of Slackbot",
+            "fields": [
                 {
-                    "url": "http://www.publicdomainpictures.net/pictures/30000/t2/duck-on-a-rock.jpg"
-                }
-                ],
-                "buttons": [
+                    "title": "Volume",
+                    "value": "1",
+                    "short": true
+                },
                 {
-                    "type": "openUrl",
-                    "title": "WikiPedia Page",
-                    "value": "https://en.wikipedia.org/wiki/PigLatin"
+                    "title": "Issue",
+                    "value": "3",
+            "short": true
                 }
-                ]
-            }
-            },
-            {
-            "contentType": "application/vnd.microsoft.card.hero",
-            "content": {
-                "title": "I'm a hero card about pork shoulder",
-                "subtitle": "Pork Shoulder Wikipedia Page",
-                "images": [
+            ],
+            "author_name": "Stanford S. Strickland",
+            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
+            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
+        },
+        {
+            "title": "Synopsis",
+            "text": "After @episod pushed exciting changes to a devious new branch back in Issue 1, Slackbot notifies @don about an unexpected deploy..."
+        },
+        {
+            "fallback": "Would you recommend it to customers?",
+            "title": "Would you recommend it to customers?",
+            "callback_id": "comic_1234_xyz",
+            "color": "#3AA3E3",
+            "attachment_type": "default",
+            "actions": [
                 {
-                    "url": "http://www.publicdomainpictures.net/pictures/30000/t2/duck-on-a-rock.jpg"
-                }
-                ],
-                "buttons": [
+                    "name": "recommend",
+                    "text": "Recommend",
+                    "type": "button",
+                    "value": "recommend"
+                },
                 {
-                    "type": "openUrl",
-                    "title": "WikiPedia Page",
-                    "value": "https://en.wikipedia.org/wiki/Pork "
+                    "name": "no",
+                    "text": "No",
+                    "type": "button",
+                    "value": "bad"
                 }
-                ]
-            }
-            },
-            {
-            "contentType": "application/vnd.microsoft.card.hero",
-            "content": {
-                "title": "I'm a hero card about Bacon",
-                "subtitle": "Bacon Wikipedia Page",
-                "images": [
-                {
-                    "url": "http://www.publicdomainpictures.net/pictures/30000/t2/duck-on-a-rock.jpg"
-                }
-                ],
-                "buttons": [
-                {
-                    "type": "openUrl",
-                    "title": "WikiPedia Page",
-                    "value": "https://en.wikipedia.org/wiki/Bacon"
-                }
-                ]
-            }
+            ]
         }
     ]
-    
-    }   ;
-    
+}
+
     
     
     
