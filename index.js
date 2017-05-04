@@ -75,11 +75,9 @@ var speech = "false";
    
 var slack_message = {
     
-	 "attachmentLayout":"carousel",
                    "attachments": [
                      {
-                      "contentType": "application/vnd.microsoft.card.thumbnail",
-                       "content": {
+                      
                          "title": "I'm a thumbnail card",
                          "subtitle": "Pig Latin Wikipedia Page",
                          "images": [
@@ -95,47 +93,9 @@ var slack_message = {
                           }
                         ]
                       }
-                    },
-					{
-                      "contentType": "application/vnd.microsoft.card.thumbnail",
-                       "content": {
-                         "title": "I'm a thumbnail card",
-                         "subtitle": "Pig Latin Wikipedia Page",
-                         "images": [
-                           {
-                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
-                          }
-                        ],
-                        "buttons": [
-                          {
-                            "type": "openUrl",
-                           "title": "WikiPedia Page",
-                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
-                          }
-                        ]
-                      }
-                    },
-					{
-                      "contentType": "application/vnd.microsoft.card.thumbnail",
-                       "content": {
-                         "title": "I'm a thumbnail card",
-                         "subtitle": "Pig Latin Wikipedia Page",
-                         "images": [
-                           {
-                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
-                          }
-                        ],
-                        "buttons": [
-                          {
-                            "type": "openUrl",
-                           "title": "WikiPedia Page",
-                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
-                          }
-                        ]
-                      }
-                    }
-                  ]
-}
+                    
+			
+       ]}          
    
 
 
