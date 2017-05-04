@@ -134,7 +134,7 @@ var slack_message = {
         }
         
     ]
-    ]
+    
 }
    
 
