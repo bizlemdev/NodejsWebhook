@@ -73,7 +73,7 @@ var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
    
-var skype_message = {
+var slack_message = {
     
 	 "attachmentLayout":"carousel",
                    "attachments": [
@@ -146,7 +146,7 @@ var skype_message = {
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-		"skype" :skype_message
+		"skype" :slack_message
            			
         }
     });
