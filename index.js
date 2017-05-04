@@ -107,7 +107,7 @@ var slack_message = {
             "actions": [
                 {
                     "name": "google",
-                    "text": "google",
+                    "text": "<http://www.google.com|google>",
                     "type": "button",
                     "value": "http://www.google.com"
                 },
