@@ -106,7 +106,7 @@ var slack_message = {
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-		"skype" :slack_message
+		"slack" :slack_message
            			
         }
     });
