@@ -73,68 +73,68 @@ var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
    
-var slack_message = {
+var skype_message = {
     
-	"attachmentLayout":"carousel",
-    "attachments": [
-            {
-            "title": "The Further Adventures of Slackbot",
-            "fields": [
-                {
-                    "title": "Volume",
-                    "value": "1",
-                    "short": true
-                },
-                {
-                    "title": "Issue",
-                    "value": "3",
-            "short": true
-                }
-            ],
-            "author_name": "Stanford S. Strickland",
-            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
-            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
-        },
-		
-		{
-            "title": "The Further Adventures of Slackbot",
-            "fields": [
-                {
-                    "title": "Volume",
-                    "value": "1",
-                    "short": true
-                },
-                {
-                    "title": "Issue",
-                    "value": "3",
-            "short": true
-                }
-            ],
-            "author_name": "Stanford S. Strickland",
-            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
-            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
-        },
-		{
-            "title": "The Further Adventures of Slackbot",
-            "fields": [
-                {
-                    "title": "Volume",
-                    "value": "1",
-                    "short": true
-                },
-                {
-                    "title": "Issue",
-                    "value": "3",
-            "short": true
-                }
-            ],
-            "author_name": "Stanford S. Strickland",
-            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
-            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
-        }
-        
-    ]
-    
+	 "attachmentLayout":"carousel",
+                   "attachments": [
+                     {
+                      "contentType": "application/vnd.microsoft.card.thumbnail",
+                       "content": {
+                         "title": "I'm a thumbnail card",
+                         "subtitle": "Pig Latin Wikipedia Page",
+                         "images": [
+                           {
+                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
+                          }
+                        ],
+                        "buttons": [
+                          {
+                            "type": "openUrl",
+                           "title": "WikiPedia Page",
+                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
+                          }
+                        ]
+                      }
+                    },
+					{
+                      "contentType": "application/vnd.microsoft.card.thumbnail",
+                       "content": {
+                         "title": "I'm a thumbnail card",
+                         "subtitle": "Pig Latin Wikipedia Page",
+                         "images": [
+                           {
+                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
+                          }
+                        ],
+                        "buttons": [
+                          {
+                            "type": "openUrl",
+                           "title": "WikiPedia Page",
+                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
+                          }
+                        ]
+                      }
+                    },
+					{
+                      "contentType": "application/vnd.microsoft.card.thumbnail",
+                       "content": {
+                         "title": "I'm a thumbnail card",
+                         "subtitle": "Pig Latin Wikipedia Page",
+                         "images": [
+                           {
+                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
+                          }
+                        ],
+                        "buttons": [
+                          {
+                            "type": "openUrl",
+                           "title": "WikiPedia Page",
+                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
+                          }
+                        ]
+                      }
+                    }
+                  ]
 }
    
 
@@ -146,7 +146,7 @@ var slack_message = {
         displayText: speech,
         source: 'biz-webhook-sample',
         data: {
-		"slack" :slack_message
+		"skype" :skype_message
            			
         }
     });
