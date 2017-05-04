@@ -73,98 +73,6 @@ var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
    
-   
-   var slack_message ={
-    "text": "in Which tool you want to create Project?",
-    "attachments": [
-        {
-            "text": "Choose a game to tool",
-            "fallback": "You are unable to choose a game",
-            "callback_id": "wopr_game",
-            "color": "#3AA3E3",
-            "attachment_type": "default",
-            "actions": [
-                {
-                    "name": "tool",
-                    "text": "Github",
-                    "type": "button",
-                    "value": "Github"
-                },
-                {
-                    "name": "tool",
-                    "text": "Eclips",
-                    "type": "button",
-                    "value": "Eclips"
-                },
-                {
-                    "name": "tool",
-                    "text": "Heroku",
-                    "style": "danger",
-                    "type": "button",
-                    "value": "Heroku",
-                    "confirm": {
-                        "title": "Are you sure?",
-                        "text": "Wouldn't you prefer a good tool of Github?",
-                        "ok_text": "Yes",
-                        "dismiss_text": "No"
-                    }
-                }
-            ]
-        }
-    ]
-}
- 
-	}else if(req.body.result.parameters.echoText == "show the book in stock"){ 
-	
-	var slack_message = {
-    "text": "New comic book alert!",
-    "attachments": [
-        {
-            "title": "The Further Adventures of Slackbot",
-            "fields": [
-                {
-                    "title": "Volume",
-                    "value": "1",
-                    "short": true
-                },
-                {
-                    "title": "Issue",
-                    "value": "3",
-            "short": true
-                }
-            ],
-            "author_name": "Stanford S. Strickland",
-            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
-            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
-        },
-        {
-            "title": "Synopsis",
-            "text": "After @episod pushed exciting changes to a devious new branch back in Issue 1, Slackbot notifies @don about an unexpected deploy..."
-        },
-        {
-            "fallback": "Would you recommend it to customers?",
-            "title": "Would you recommend it to customers?",
-            "callback_id": "comic_1234_xyz",
-            "color": "#3AA3E3",
-            "attachment_type": "default",
-            "actions": [
-                {
-                    "name": "recommend",
-                    "text": "Recommend",
-                    "type": "button",
-                    "value": "recommend"
-                },
-                {
-                    "name": "no",
-                    "text": "No",
-                    "type": "button",
-                    "value": "bad"
-                }
-            ]
-        }
-    ]
-}
-
 var skype_message = {
    
                    "attachments": [
@@ -188,7 +96,7 @@ var skype_message = {
                         ]
                       }
                     }
-                  ],
+                  ]
     
 	}}
 	}
