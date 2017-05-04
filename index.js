@@ -74,28 +74,53 @@ var speech = "false";
    if(req.body.result.parameters.echoText == "Create New Project"){
    
 var slack_message = {
-    
-                   "attachments": [
-                     {
-                      
-                         "title": "I'm a thumbnail card",
-                         "subtitle": "Pig Latin Wikipedia Page",
-                         "images": [
-                           {
-                            "url": "https://www.google.co.in/search?q=skype+image&tbm=isch&imgil=DhJaKjc7Ar5gvM%253A%253BDLLGS44NQ14GqM%253Bhttps%25253A%25252F%25252Fwww.skype.com%25252Fen%25252F&source=iu&pf=m&fir=DhJaKjc7Ar5gvM%253A%252CDLLGS44NQ14GqM%252C_&usg=__5HQRMDPVyQswokCywpXxDAZxyEo%3D&biw=1366&bih=662&ved=0ahUKEwinq7bU5tPTAhVBP48KHU4bCUQQyjcIPw&ei=X9cJWed_wf68BM62pKAE#imgrc=DhJaKjc7Ar5gvM:"
-                          }
-                        ],
-                        "buttons": [
-                          {
-                            "type": "openUrl",
-                           "title": "WikiPedia Page",
-                            "value": "https://en.wikipedia.org/wiki/Pig_Latin"
-                          }
-                        ]
-                      }
-                    
-			
-       ]}          
+     "text": "New comic book alert!",
+    "attachments": [
+        {
+            "title": "The Further Adventures of Slackbot",
+            "fields": [
+                {
+                    "title": "Volume",
+                    "value": "1",
+                    "short": true
+                },
+                {
+                    "title": "Issue",
+                    "value": "3",
+            "short": true
+                }
+            ],
+            "author_name": "Stanford S. Strickland",
+            "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
+            "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
+        },
+        {
+            "title": "Synopsis",
+            "text": "After @episod pushed exciting changes to a devious new branch back in Issue 1, Slackbot notifies @don about an unexpected deploy..."
+        },
+        {
+            "fallback": "Would you recommend it to customers?",
+            "title": "Would you recommend it to customers?",
+            "callback_id": "comic_1234_xyz",
+            "color": "#3AA3E3",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "recommend",
+                    "text": "Recommend",
+                    "type": "button",
+                    "value": "recommend"
+                },
+                {
+                    "name": "no",
+                    "text": "No",
+                    "type": "button",
+                    "value": "bad"
+                }
+            ]
+        }
+]
+}          
    
 
 
