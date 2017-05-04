@@ -90,7 +90,7 @@ var slack_message = {
             "short": true
                 }
             ],
-            "author_name": "Stanford S. Strickland",
+            "author_name": "Stanford S. Strickland  <https://www.google.com|google>",
             "author_icon": "http://a.slack-edge.com/7f18https://a.slack-edge.com/bfaba/img/api/homepage_custom_integrations-2x.png",
             "image_url": "http://i.imgur.com/OJkaVOI.jpg?1"
         },
@@ -107,9 +107,9 @@ var slack_message = {
             "actions": [
                 {
                     "name": "google",
-                    "text": "Recommend",
+                    "text": "google",
                     "type": "button",
-                    "value": "<http://www.google.com>"
+                    "value": "http://www.google.com"
                 },
                 {
                     "name": "no",
