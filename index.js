@@ -109,7 +109,7 @@ var slack_message = {
                     "name": "recommend",
                     "text": "Recommend",
                     "type": "button",
-                    "value": "<http://www.foo.com|google>"
+                    "value": "<http://www.google.com|google>"
                 },
                 {
                     "name": "no",
