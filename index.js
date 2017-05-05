@@ -137,7 +137,53 @@ var slack_message = {
     });
 });
 
+restService.post('/slack-button-test', function(req, res) {
 
+var speech = "false";
+    if(req.body.result != null && req.body.result.parameters != null){
+   if(req.body.result.parameters.echoText == "give buttons"){
+   
+var slack_message = {
+     "text": "New comic book alert!",
+    "attachments": [
+        {
+           
+            "callback_id": "comic_1234_xyz",
+            
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "Recommend",
+                    "text": "Recommend",
+                    "type": "button",
+                    "value": "Recommend"
+                },
+                {
+                    "name": "no",
+                    "text": "No",
+                    "type": "button",
+                    "value": "bad"
+                }
+            ]
+        }
+	    
+]
+}          
+   
+
+
+}}
+   
+    return res.json({
+        speech: speech,
+        displayText: speech,
+        source: 'biz-webhook-sample',
+        data: {
+		"slack" :slack_message
+           			
+        }
+    });
+});
 
 
 restService.listen((process.env.PORT || 8000), function() {
