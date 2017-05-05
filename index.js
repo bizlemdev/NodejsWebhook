@@ -106,10 +106,10 @@ var slack_message = {
             "attachment_type": "default",
             "actions": [
                 {
-                    "name": "google",
-                    "text": "<http://www.google.com|google>",
+                    "name": "Recommend",
+                    "text": "Recommend",
                     "type": "button",
-                    "value": "http://www.google.com"
+                    "value": "Recommend"
                 },
                 {
                     "name": "no",
