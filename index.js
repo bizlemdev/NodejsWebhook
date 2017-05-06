@@ -147,7 +147,7 @@ var skype_message={
        "attachments": [
             {
                  "contentType": "image/png",
-                 "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png"
+                 "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
                  "name":"Bender_Rodriguez.png"
              }
          ]
