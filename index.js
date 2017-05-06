@@ -143,7 +143,8 @@ var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "give buttons"){
    
-var skype_message={
+var skype_message = {
+	 "text": "New comic book alert!",
        "attachments": [
             {
                  "contentType": "image/png",
@@ -152,8 +153,10 @@ var skype_message={
              }
          ]
      }
-}else{  speech="not recognized";}
-   
+}else{ 
+	speech="not recognized";
+}
+    } 
     return res.json({
         speech: speech,
         displayText: speech,
