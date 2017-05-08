@@ -15,11 +15,14 @@ restService.post('/bizbotapi', function(req, res) {
    var speech = "false";
     if(req.body.result != null && req.body.result.parameters != null){
    if(req.body.result.parameters.echoText == "Create New Project"){
-       speech = "in Which tool you want to create Project?";
+      // speech = "in Which tool you want to create Project?";
+	   speech = JSON.stringify(req.body);
       }else if(req.body.result.parameters.echoText == "Github"){
-      speech = "What is the Project Name and  Description?";
+     // speech = "What is the Project Name and  Description?";
+	      speech = JSON.stringify(req.body);
       }else if(req.body.result.parameters.echoText == "Name New Description NLP POC"){
-      speech = "Ok. I am going to create \"New\" project in Github with description \"NLP POC\"";
+    //  speech = "Ok. I am going to create \"New\" project in Github with description \"NLP POC\"";
+	      speech = JSON.stringify(req.body);
       }else if(req.body.result.parameters.echoText == "How many Tasks open in X Project current sprint"){
       speech = "20 Tasks and 5 Bugs are in Open status";
       }else if(req.body.result.parameters.echoText == "Use X project"){
