@@ -9,7 +9,7 @@ const restService = express();
 restService.use(bodyParser.urlencoded({
     extended: true
 }));
-
+server.timeout = 100000;
 restService.use(bodyParser.json());
 var internmen = null;
 var endrespo;
