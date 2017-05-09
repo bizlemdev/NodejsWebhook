@@ -179,10 +179,35 @@ var skype_message = {
 
 
 restService.post('/conversaction-demo', function(req, res) {
-   var speech = "false";
-   return speech;
-});
 
+var speech = "false";
+    if(req.body.result != null && req.body.result.parameters != null){
+   if(req.body.result.parameters.echoText == "give buttons"){
+   
+var skype_message = {
+	 "text": "New comic book alert!",
+       "attachments": [
+            {
+                 "contentType": "image/png",
+                 "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+                 "name":"Bender_Rodriguez.png"
+             }
+         ]
+     }
+}else{ 
+	speech="not recognized";
+}
+    } 
+    return res.json({
+        speech: speech,
+        displayText: speech,
+        source: 'biz-webhook-sample',
+        data: {
+		"skype" :skype_message
+           			
+        }
+    });
+});
 
 
 
