@@ -1,5 +1,6 @@
 'use strict';
 
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -10,6 +11,11 @@ restService.use(bodyParser.urlencoded({
 }));
 
 restService.use(bodyParser.json());
+var internmen = null;
+var endrespo;
+var count=0;
+var requirment=[];
+
 
 restService.post('/bizbotapi', function(req, res) {
    var speech = "false";
@@ -170,6 +176,70 @@ var skype_message = {
         }
     });
 });
+
+
+restService.post('/conversaction-demo', function(req, res) {
+   var speech = "false";
+   if(req.body.result != null && req.body.result.parameters != null){
+   if(internmen==null){
+   
+     
+      if(req.body.result.parameters.echoText == "Create New Project"){ 
+	  count=0;
+        speech = NLP("Create New Project");
+  }
+      }else{
+		if(req.body.result != null && req.body.result.parameters != null){ 
+		requirment[count]=req.body.result.parameters.echoText;
+		count++;
+		speech = conversation(count);
+		}
+	
+	}}
+	return speech;
+});
+
+function conversation(no){
+var ss = internmen.split("~"); 
+if(no<ss.length){
+ 
+return res.json({
+        speech: ss[no],
+        displayText: ss[no],
+        source: 'biz-webhook-sample'
+    });
+
+}else {
+var str="Project created in "+requirment[0]+"as name "+requirment[1];
+internmen=null;
+count=0;
+return res.json({
+        speech: str,
+        displayText: str,
+        source: 'biz-webhook-sample'
+    });
+}
+}
+
+function NLP(a){
+	if(a=="Create New Project"){
+	internmen="Tool~ProjectName";
+	conversation(0);
+	}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 restService.listen((process.env.PORT || 8000), function() {
