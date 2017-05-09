@@ -222,10 +222,12 @@ return res.json({
 }
 
 function NLP(a){
+	var res = "";
 	if(a=="Create New Project"){
 	internmen="Tool~ProjectName";
-	conversation(0);
+	res = conversation(0);
 	}
+	return res;
 	}
 	
 
