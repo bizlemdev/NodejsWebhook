@@ -212,7 +212,7 @@ if(no<ss.length){
  return ss[no];
 
 }else {
-var str="Project created in "+requirment[0]+"as name "+requirment[1];
+var str="Project created in "+requirment[0]+" Project name is "+requirment[1];
 internmen=null;
 count=0;
 return str;
