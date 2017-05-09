@@ -178,39 +178,56 @@ var skype_message = {
 });
 
 
-restService.post('/conversaction-demo', function(req, res) {
-
+restService.post('/conversation-demo', function(req, res) {
 var speech = "false";
-    if(req.body.result != null && req.body.result.parameters != null){
-   if(req.body.result.parameters.echoText == "give buttons"){
+   if(req.body.result != null && req.body.result.parameters != null){
+   if(internmen==null){
    
-var skype_message = {
-	 "text": "New comic book alert!",
-       "attachments": [
-            {
-                 "contentType": "image/png",
-                 "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-                 "name":"Bender_Rodriguez.png"
-             }
-         ]
-     }
-}else{ 
-	speech="not recognized";
-}
-    } 
-    return res.json({
+     
+      if(req.body.result.parameters.echoText == "Create New Project"){ 
+	  count=0;
+        speech = NLP("Create New Project");
+      }
+    }else{
+		if(req.body.result != null && req.body.result.parameters != null){ 
+		requirment[count]=req.body.result.parameters.echoText;
+		count++;
+		speech = conversation(count);
+		}
+	
+	}
+	}
+	return res.json({
         speech: speech,
         displayText: speech,
-        source: 'biz-webhook-sample',
-        data: {
-		"skype" :skype_message
-           			
-        }
+        source: 'biz-webhook-sample'
     });
+
 });
 
 
+function conversation(no){
+var ss = internmen.split("~"); 
+if(no<ss.length){
+ return ss[no];
 
+}else {
+var str="Project created in "+requirment[0]+"as name "+requirment[1];
+internmen=null;
+count=0;
+return str;
+
+}
+}
+
+function NLP(a){
+	var res = "false";
+	if(a=="Create New Project"){
+	internmen="Tool~ProjectName";
+	res = conversation(0);
+	}
+	return res;
+	}
 
 
 
