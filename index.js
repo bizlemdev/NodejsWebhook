@@ -108,7 +108,7 @@ var slack_message = {
             "text": "After @episod pushed exciting changes to a devious new branch back in Issue 1, Slackbot notifies @don about an unexpected deploy..."
         },
         {
-            "fallback": "Would you recommend it to customers?",
+            
             "title": "Would you recommend it to customers?",
             "callback_id": "comic_1234_xyz",
             "color": "#3AA3E3",
@@ -117,7 +117,7 @@ var slack_message = {
                 {
                     "name": "Recommend",
                     "text": "Recommend",
-                    "type": "button",
+                    "type": "textbox",
                     "value": "Recommend"
                 },
                 {
